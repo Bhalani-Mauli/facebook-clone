@@ -8,13 +8,15 @@ import ChatIcon from '@material-ui/icons/Chat';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { useStateValue } from "../StateProvider";
 
 function Siderbar() {
+    const [{ user }, dispatch] = useStateValue();
     return (
         <div className="sidebar">
             <SidebarRow 
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhhbJo1TA84pPpOzi_cj45fM2zLKKqzVuY1g&usqp=CAU" 
-                title="Mauli Makadiya"
+                src={user.photoURL}
+                title={user.displayName}
             />
             <SidebarRow
                 Icon={LocalHospitalIcon}

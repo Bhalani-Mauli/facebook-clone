@@ -1,5 +1,6 @@
 .app {
     background-color: #f1f2f5;
+    overflow: hidden;
 }
 
 .app_body {
